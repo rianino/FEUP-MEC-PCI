@@ -3,11 +3,6 @@
 ## Descrição
 Neste repositório estão todos os exercícios realizados por mim nas aulas de Programação de Computadores I em Python e eventualmente em MATLAB.
 
-## Índice
-- Instalação
-- Uso
-- Contacto
-
 ## Instalação
 Os programas devem correr na maioria dos compiladores. Eu uso VS Code e PyCharm.
 
