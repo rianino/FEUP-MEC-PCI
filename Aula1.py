@@ -34,3 +34,7 @@ elif delta == 0:
     print(f"A equação tem uma raiz dupla: {raiz}.")
 else:
     print("A equação não tem raízes reais.")
+
+# EXERCICIO 3
+print('-------------------')
+print('EXERCÍCIO 3')
