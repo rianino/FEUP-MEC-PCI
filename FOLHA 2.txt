@@ -1,0 +1,138 @@
+FOLHA 2
+-------------------------//---------------------------
+1 b)
+
+OBJETIVO: 
+	Norma de um vetor.
+
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, nro dew elementos de vetor
+		- X, uni-indexada e inteiros, vetor dado
+	AUXILIARES:
+		- I, inteiro, variavel de ciclo
+		- soma, inteiro, soma dos quadrados dos componentes
+	RESULTADOS:
+		- norma, real, norma do vetor
+CORPO:
+	leia(N);
+	soma <- 0;
+	para I <-  ate N faca:
+		leia(X[i]);
+		soma <- soma + X[i]^2;
+	norma <- raiz(soma);
+	escreva(norma);
+
+----------------------//----------------------
+1 c)
+OBJETIVO:
+	Calcular o produto interno de dois vetores.
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, nro elementos do vetor X
+		- X, uni_indexada de inteiros, vetor dado
+		- M, inteiro, nro elementos do vetor Y
+		- Y, uni_indexada de inteiros, vetor dado
+	AUXILIARES:
+		- i, inteiro, variavel de ciclo
+	RESULTADOS:
+		- prod, inteiro, produto interno dos vetores X e Y
+CORPO:
+	leia(N); leia(M);
+	se N  = M entao
+		prod <- 0
+		para i <- 1 ate N faca
+			leia(X[i]);
+		para i <- 1 ate M faca
+			leia(Y[i]);
+			prod <- prod + x[i]*Y[i];
+		escreva(prod);
+	senao
+		escreva("Dimensoes nao compativeis");
+-----------------------//-------------------------
+1 d)
+OBJETIVO:
+	Produto de um vetor por um escalar real
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, nro elementos do vetor X
+		- X, uni_indexada de inteiros, vetor dado
+		- p, real, escalar
+	AUXILIARES:
+		- i, inteiro, variavel ciclo
+	RESULTADOS:
+		- Y, uni_indexada de reais, vetor escalado
+CORPO:
+	leia(p);
+	leia(N);
+	para i <- 1 ate N faca
+		leia(X[i]);
+		Y[i] <- X[i] * p
+		escreva(Y[i]);
+-----------------------//-------------------------
+4.
+OBJETIVO:
+	Escreva uma funcao para calcular um vetor com os divisores do numero N.
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, dividendo
+	AUXILIARES:
+		- i, inteiro, variavel ciclo
+		- ind, inteiro, Contador
+		- q, inteiro, quociente da divisao
+		- r, inteiro
+	RESULTADO:
+		- X, uni_indexada de inteiros, vetor dos divisors
+CORPO:
+	leia(N);
+	X[1] <- 1; ind <- 1
+	para i <- 1 ate N "/" 2 faca
+		q <- N "/" i;
+		r <- N = i * q;
+		se r = 0 entao
+			ind <- ind + 1;
+			X[ind] <- i;
+	X[ind+1] <- N;
+	para i <- 1 ate ind + 1 faca
+		escreva(X[i]);
+----------------------------//------------------------------
+8. 
+OBJETIVO:
+	Calcular o elemento maximo de um vetor e a respetiva posicao
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, nro elementos do vetor
+		- X, uni_indexada de inteiros,
+	AUXILIARES:
+		- i, inteiro, variavel ciclo
+	RESULTADO:
+		- max, inteiro, elemento maximo do vetor
+		- pos, inteiro, posicao de max
+
+CORPO:
+	leia(N);
+	leia(X[1]);
+	max <- X[1];
+	pos <- 1;
+	para N <- 2 ate N faca
+		leia(X[i]);
+		se X[i] > max entao
+			max <- X[i]
+			pos <- i
+	escreva(max, pos);
+------------------------------//---------------------------------
+OBJETIVO:
+	Calcular o elemento maximo das coordenadas de indice par de um vetor, e a media dos components de indice impar
+VARIAVEIS:
+	DADAS:
+		- N, inteiro, numero de elementos do vetor X
+		- X, uni_indexada de inteiros
+
+	AUXILIARES:
+		- 
+	RESULTADO
+		- max, inteiro, maximo dos indices pares
+		- med, real, media dos components de indice impar
+CORPO:
+	
+

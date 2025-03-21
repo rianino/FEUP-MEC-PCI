@@ -1,6 +1,7 @@
 # Exercicio 14
 
 
+
 # Exercicio 20
 
 # Determinar se um numero é ou não um numero de Armstrong
