@@ -134,5 +134,45 @@ VARIAVEIS:
 		- max, inteiro, maximo dos indices pares
 		- med, real, media dos components de indice impar
 CORPO:
-	
+
+
+
+-----------------------//--------------------------
+6.
+OBJETIVO
+	Para um vetor X, calcular a media geometrica dos elementos
+VARIAVEIS
+	DADAS
+		- X, uni_indexada de inteiros, vetor
+		- N, inteiro, numero de elementos de X
+	AUXILIARES
+		- prod, 
+		- i, inteiro, variavel ciclo
+	RESULTADO
+		
+CORPO
+	leia(N);
+	prod <- 1
+	para i <- 1 ate N faca:
+		leia(X[i]);
+		prod <- prod * X[i]
+	escreva(prod^(1/N));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
