@@ -5,3 +5,4 @@ lista2 = [4,3,2,1,1]
 
 print(v.soma_vetores(lista1, lista2))
 
+print(v.binario(13))

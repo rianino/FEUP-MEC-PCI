@@ -157,18 +157,33 @@ CORPO
 		leia(X[i]);
 		prod <- prod * X[i]
 	escreva(prod^(1/N));
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------//--------------------------
+7.
+a)
+OBJETIVO
+	Calcular o desvio padrao.
+VARIAVEIS
+	DADAS
+		- N, inteiro, numero de elementos
+		- X, indexada de inteiros, vetor que guarda os dados
+	AUXILIARES
+		- mu, real, media
+		- soma1, inteiro, soma dos elementos e X
+		- soma2, real, soma das diferencas de X[i] por mu
+		- i, inteiro, variavel-ciclo
+	RESULTADO
+		- st, real, desvio padrao
+CORPO
+	leia(N);
+	mu <- 0; soma1 <- 0; soma2 <- 0;
+	para i <- 1 ate N faca
+		leia(X[i]);
+		soma1 <- soma1 + X[i];
+	mu <- soma1 / N;
+	para i <- 1 ate N faca
+		soma2 <- soma2 + (X[i] - mu)^2;
+	st <- (soma2 / N)^0,5;
+	escreva(st);
 
 
 
