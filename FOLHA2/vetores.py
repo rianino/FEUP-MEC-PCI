@@ -38,19 +38,26 @@ def calcula_divisores(N):
     divisores.append(N)
     return divisores
 
+# Ordenar o vetor com os negativos a esquerda
 
+def ordena_esq(A):
+    left = []
+    mid = []
+    right = []
+    for i in A:
+        if i < 0:
+            left.append(i)
+        elif i == 0:
+            mid.append(i)
+        else:
+            right.append(i)
+    Y = left + mid + right
+    return Y
 
-# Converter números decimais para binário
-def binario(N):
-    resto = ''
-    binario = ''
-
-    # N e um numero decimal, obter os restos da divisao de N por 2
-    while N > 1:
-        resto += str(N % 2)
-        N = N // 2
-    
-    # Inverter a ordem do resto
-    for i in range(len(resto) - 1, -1, -1):
-        binario += resto[i]
-    return binario
+def novo_elimina_repete(X):
+    for i in X:
+        A = X.remove(i)
+        for j in A:
+            if j == i:
+                A.remove(j)
+        
