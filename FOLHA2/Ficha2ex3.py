@@ -24,4 +24,6 @@ kA = v.escalar_vetor(k,A)
 
 conta = v.soma_vetores(ABC, kA)
 
-resultado = 
+resultado = v.modulo_vetor(conta)
+
+print(resultado)

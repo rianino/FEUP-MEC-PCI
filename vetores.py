@@ -23,6 +23,13 @@ def mult_vetores(A,B):
 def escalar_vetor(k,A):
     return [k * A[i] for i in range(len(A))]
 
+def modulo_vetor(A):
+    soma = 0
+    for i in range(len(A)):
+        soma += A[i]**2
+    modulo = soma**0.5
+    return modulo
+
 
 
 
