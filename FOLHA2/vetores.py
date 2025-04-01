@@ -7,7 +7,7 @@ def soma_vetores(X,Y):
 
 def inputVetor():
     # Dimensao de A
-    DA = int(input('Escreva a dimensão de A'))
+    DA = int(input('Escreva a dimensão do vetor: '))
     # Dar a dimensao a A
     A = [0] * DA
     # Inserir os elementos de A
@@ -30,11 +30,13 @@ def modulo_vetor(A):
     modulo = soma**0.5
     return modulo
 
-
-
-
-
-
+def calcula_divisores(N):
+    divisores = []
+    for i in range(1, N // 2):
+        if N % i == 0:
+            divisores.append(i)
+    divisores.append(N)
+    return divisores
 
 
 

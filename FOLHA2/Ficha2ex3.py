@@ -10,11 +10,14 @@ A = None
 B = None
 C = None
 
+print('VETOR A')
 A = v.inputVetor()
-while len(B) != len(A):
-    B = v.inputVetor()
-while len(C) != len(A):
-    C = v.inputVetor()
+
+print('VETOR B')
+B = v.inputVetor()
+
+print('VETOR C')
+C = v.inputVetor()
 
 k = int(input('Insira o valor de k: '))
 
