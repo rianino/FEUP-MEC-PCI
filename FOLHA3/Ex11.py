@@ -18,4 +18,4 @@ for i in range(len(A[0])):
 A[-1] = v # Soma das anteriores
 
 m.printMz(A)
-# Defina uma funcao para a alinea anterior e escreva um programa para testar
+

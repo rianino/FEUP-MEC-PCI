@@ -1,3 +1,5 @@
+import random
+
 # MODULO MATRIZES
 
 def ler_matriz():
@@ -31,3 +33,12 @@ def somaMz(A, B):
         return C
     else:
         raise ValueError('A devem ter a mesma dimensao')
+
+def randMz(mm,nn):
+    '''Esta funcao cria uma matriz m por n com inteiros aleatorios entre 0 e 100, inclusive'''
+    A = [0] * mm
+    for i in range(mm):
+        A[i] = [0] * mm
+        for j in range(nn):
+            A[i][j] = random.randint(0,101)
+    return A
