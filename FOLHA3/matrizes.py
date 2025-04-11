@@ -15,3 +15,19 @@ def ler_matriz():
 
 def printMz(A):
     return [print(A[i]) for i in range(len(A))]
+
+def somaMz(A, B):
+    # SOMAR AS MATRIZES
+    C = [0] * len(A)
+    for i in range(len(A[0])):
+        C[i] = [0] * len(A[0])
+
+    # verificar se A e B sao da mesma dimensao
+
+    if len(A) == len(B) and len(A[0]) == len(B[0]):
+        for i in range(len(A)):
+            for j in range(len(A[0])):
+                C[i][j] = A[i][j] + B[i][j]
+        return C
+    else:
+        raise ValueError('A devem ter a mesma dimensao')
