@@ -1,5 +1,5 @@
 import random
-
+import math
 # MODULO MATRIZES
 
 def ler_matriz():
@@ -40,5 +40,69 @@ def randMz(mm,nn):
     for i in range(mm):
         A[i] = [0] * mm
         for j in range(nn):
-            A[i][j] = random.randint(0,101)
+            A[i][j] = float(random.randint(0,100))
     return A
+
+def m_matriz_escalar(k, A):
+    '''Multiplicar uma matriz por um escalar.'''
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            A[i][j] = A[i][j] * k
+    return A
+
+def m_matriz_dp(A):
+    dp = 1
+    m = len(A)
+    n = len(A[0])
+    for i in range(m):
+        for j in range(n):
+            if i == j:
+                dp *= A[i][j]
+    return dp
+
+def m_matriz_ds(A):
+    ds = 1
+    m = len(A)
+    n = len(A[0])
+    for i in range(m):
+        for j in range(n):
+            if i == m - (j + 1):
+                ds *= A[i][j]
+    return ds
+
+def define_mat_TriangInferior(N, valor_1, valor_2):
+    A = [0] * N
+    for i in range(N):
+        A[i] = [0] * N
+        for j in range(N):
+            if i > j:
+                A[i][j] = valor_1
+            elif i == j:
+                A[i][j] = valor_2
+            else:
+                A[i][j] = float(random.randint(0, 11))
+    return A
+
+def transforma_linear(A,X):
+    '''Calcular transformacao linear.'''
+    if len(A[0]) != len(X):
+        raise TypeError('A matriz e o vetor tem dimensoes incompativeis.')
+    m = len(A)
+    n = len(A[0])
+    Ax = [0] * n
+    for i in range(m):
+        for j in range(n):
+            Ax[i] = A[i][j] * X[j]
+    return Ax
+
+def construir_vetor(A):
+    m = len(A)
+    n = len(A[0])
+    B = [0] * m
+    for i in range(m):
+        maximo = -math.inf
+        for j in range(n):
+            if maximo < A[i][j]:
+                maximo = A[i][j]
+        B[i] = maximo
+    return B
