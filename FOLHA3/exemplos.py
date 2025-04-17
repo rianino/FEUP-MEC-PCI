@@ -10,16 +10,26 @@ class RandomWithoutReplacement:
             raise IndexError("No more numbers to pick.")
         return self.numbers.pop()
 
+letras = 'hlvcfyifyuhjgghkhibhsfdjnfnuodsfnigfrugesr'
 
-while True:
+codigo = [24, 17, 34, 12, 39, 41]
 
-    letras = ['g','i','n','g','e','r']
+encriptada = ''
 
+palavra = ''
+
+contador = 0
+
+for i in range(6):
+    encriptada += letras[codigo[i]]
+
+while palavra != encriptada:
     palavra = ''
 
-    randomizer = RandomWithoutReplacement(0, len(letras) - 1)
-    for i in range(len(letras)):
-        palavra += letras[randomizer.get()]
+    randomizer = RandomWithoutReplacement(0, len(encriptada) - 1)
+
+    for i in range(len(encriptada)):
+        palavra += encriptada[randomizer.get()]
 
     print('==========\n')
 
@@ -27,4 +37,6 @@ while True:
 
     print('\n==========')
 
-    input()
+    contador += 1
+
+print(f'Palavra encontrada em {contador} iteracoes.')
