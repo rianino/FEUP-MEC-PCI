@@ -13,7 +13,7 @@ A = [0] * m
 for i in range(m):
     A[i] = [0] * n
     for j in range(n):
-        A[i][j] = float(random.randint(0, 100))
+        A[i][j] = float(random.randrange(101))
 
 [print(A[i]) for i in range(m)]
 
