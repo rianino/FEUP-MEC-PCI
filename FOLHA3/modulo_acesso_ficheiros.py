@@ -31,9 +31,9 @@ def escrever_vetor_linha_ficheiro_de_texto(fich,x):
 # escreve vetor em linha para ficheiro de texto
     f = open(fich, 'w')
     for i in range(len(x)):
-         f.write(str(x[i])+ ' ')     
+         f.write(str(x[i])+ ' ')
     f.close()
-#Fim    
+#Fim
 def escrever_vetor_coluna_ficheiro_de_texto(fich,x):
 # escreve vetores em ficheiro de texto
     f = open(fich, 'w')

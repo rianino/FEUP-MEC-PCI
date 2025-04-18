@@ -1,42 +1,12 @@
-import random
+import ola
+from modulo_acesso_ficheiros import*
 
-class RandomWithoutReplacement:
-    def __init__(self, start, end):
-        self.numbers = list(range(start, end + 1))
-        random.shuffle(self.numbers)
+B = le_matriz_de_ficheiro_de_texto('FOLHA3/matriz_ler.txt')
 
-    def get(self):
-        if not self.numbers:
-            raise IndexError("No more numbers to pick.")
-        return self.numbers.pop()
+print(ola.funcaoqualquer(B, 2))
 
-letras = 'hlvcfyifyuhjgghkhibhsfdjnfnuodsfnigfrugesr'
-
-codigo = [24, 17, 34, 12, 39, 41]
-
-encriptada = ''
-
-palavra = ''
-
-contador = 0
-
-for i in range(6):
-    encriptada += letras[codigo[i]]
-
-while palavra != encriptada:
-    palavra = ''
-
-    randomizer = RandomWithoutReplacement(0, len(encriptada) - 1)
-
-    for i in range(len(encriptada)):
-        palavra += encriptada[randomizer.get()]
-
-    print('==========\n')
-
-    print(palavra)
-
-    print('\n==========')
-
-    contador += 1
-
-print(f'Palavra encontrada em {contador} iteracoes.')
+# O código acima importa o módulo "ola" e todas as funções do módulo "modulo_acesso_ficheiros".
+# Em seguida, lê uma matriz de um ficheiro de texto chamado 'matriz_ler.txt' localizado na pasta 'FOLHA3'.
+# A matriz lida é armazenada na variável B.
+# Por fim, chama a função "funcaoqualquer" do módulo "ola", passando a matriz B e o número 2 como argumentos,
+# e imprime o resultado.

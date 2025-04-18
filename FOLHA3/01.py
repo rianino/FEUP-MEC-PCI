@@ -1,5 +1,5 @@
 import matrizes as mz
-
+from modulo_acesso_ficheiros import *
 # 1. Seja A uma matriz (m linhas e n colunas) e k um escalar.  
 # a) Escreva um algoritmo para multiplicar uma matriz por um escalar. 
 # b) Defina a função m_matriz_escalar(A,k) para calcular o produto da matriz A pelo 
@@ -47,5 +47,15 @@ print('\n\t--- MATRIZ B ---')
 print('B = 2 * kA')
 
 B = mz.m_matriz_escalar(2, A)
-[print(B[i]) for i in range(m)]
 
+escreve_matriz_ficheiro('escreverMatriz.txt', A)
+
+
+
+def funcaoqualquer(A, k):
+    
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            A[i][j] *= k
+
+    return A
